@@ -6,3 +6,15 @@ Feature: Test Google search functionality
     And click on the search button
     Then the results match the criteria
 
+  @Test
+  Scenario: As a Test Enginner, I try out different actions on a Sandbox page
+    Given I navigate to the Sandbox page
+    When select a value from the dropdown
+
+  @TestGrid
+  Scenario: When I run a test on the TestGrid
+    Given I navigate to the static table
+    Then I can return the value I wanted
+    
+   
+
