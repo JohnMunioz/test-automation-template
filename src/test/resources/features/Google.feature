@@ -6,15 +6,25 @@ Feature: Test Google search functionality
     And click on the search button
     Then the results match the criteria
 
-  @Test
   Scenario: As a Test Enginner, I try out different actions on a Sandbox page
     Given I navigate to the Sandbox page
     When select a value from the dropdown
 
-  @TestGrid
-  Scenario: When I run a test on the TestGrid
+  
+  Scenario: As a Test Enginner, I want to retrieve a value from a static table
     Given I navigate to the static table
     Then I can return the value I wanted
+
+  
+  Scenario: As a Test Enginner, I want to validate the static table is displayed
+    Given I navigate to the static table
+    Then I can validate the table is displayed
+
+  @Test
+  Scenario: As a Test Enginner, I want to validate that a text is present inside the list
+    Given I navigate to the list page
+    When I search the list
+    Then I can find the text in the list
     
    
 

@@ -1,6 +1,9 @@
 package steps;
 
-import io.cucumber.java.en.*;
+import org.junit.Assert;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import pages.GridPage;
 
 public class GridTestSteps {
@@ -15,7 +18,13 @@ public class GridTestSteps {
     @Then("^I can return the value I wanted$")
     public void returnCellValue() {
         String value = grid.getValuesFromGrid(3, 2);
-        System.out.println("The value is: " + value);
+        Assert.assertEquals("r: 2, c: 1", value);
     }
+
+    @Then("^I can validate the table is displayed$")
+    public void theTableIsThere() {
+        Assert.assertTrue("Exploto todo", grid.cellStatus());
+    }
+
     
 }

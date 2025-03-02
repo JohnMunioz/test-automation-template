@@ -7,7 +7,8 @@ public class GooglePage extends BasePage {
 
     private String searchButton = "//div[@class='lJ9FBc']//input[@name='btnK']";
     private String searchTextField = "//textarea[@id='APjFqb']";
-
+    private String firstResult = "//div[@class='g']//h3";
+    
     public GooglePage() {
         super(driver);
     }
@@ -30,5 +31,9 @@ public class GooglePage extends BasePage {
     
     public void enterSearchCriteria(String criteria) {
         write(searchTextField, criteria);
+    }
+
+    public String firstResult() {
+        return textFromElement(firstResult);
     }
 }
