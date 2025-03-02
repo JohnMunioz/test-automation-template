@@ -27,4 +27,17 @@ dependencies{
     // https://mvnrepository.com/artifact/org.slf4j/slf4j-simple
     testImplementation 'org.slf4j:slf4j-simple:2.0.17'
 
+    // https://mvnrepository.com/artifact/com.aventstack/extentreports-cucumber4-adapter
+    implementation 'tech.grasshopper:extentreports-cucumber7-adapter:1.9.0'
+
+   
+
+
+
+
 }
+
+test {
+    systemProperty "cucumber.options", System.getProperty("cucumber.options")
+}
+

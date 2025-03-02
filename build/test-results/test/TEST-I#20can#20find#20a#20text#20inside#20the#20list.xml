@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="I can find a text inside the list" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-03-02T21:51:58" hostname="LAPTOP-GGR1LQO1" time="37.378">
+  <properties/>
+  <testcase name="Scenario Outline name: As a Test Enginner, I want to validate that a text is present inside the list #1" classname="I can find a text inside the list" time="33.808"/>
+  <testcase name="Scenario Outline name: As a Test Enginner, I want to validate that a text is present inside the list #2" classname="I can find a text inside the list" time="1.835"/>
+  <testcase name="Scenario Outline name: As a Test Enginner, I want to validate that a text is present inside the list #3" classname="I can find a text inside the list" time="1.735"/>
+  <system-out><![CDATA[
+@List
+Scenario Outline: Scenario Outline name: As a Test Enginner, I want to validate that a text is present inside the list # src/test/resources/features/ListPageTest.feature:11
+  Given I navigate to the list page                                                                                    # steps.ListSteps.navigateToListPage()
+  When I search C in the list                                                                                          # steps.ListSteps.searchTheList(java.lang.String)
+The text is in the list: PASSED.
+  Then I can find Cindy in the list                                                                                    # steps.ListSteps.theTableIsThere(java.lang.String)
+
+@List
+Scenario Outline: Scenario Outline name: As a Test Enginner, I want to validate that a text is present inside the list # src/test/resources/features/ListPageTest.feature:12
+  Given I navigate to the list page                                                                                    # steps.ListSteps.navigateToListPage()
+  When I search B in the list                                                                                          # steps.ListSteps.searchTheList(java.lang.String)
+The text is in the list: PASSED.
+  Then I can find Bob in the list                                                                                      # steps.ListSteps.theTableIsThere(java.lang.String)
+
+@List
+Scenario Outline: Scenario Outline name: As a Test Enginner, I want to validate that a text is present inside the list # src/test/resources/features/ListPageTest.feature:13
+  Given I navigate to the list page                                                                                    # steps.ListSteps.navigateToListPage()
+  When I search A in the list                                                                                          # steps.ListSteps.searchTheList(java.lang.String)
+The text is not in the list: FAILED.
+  Then I can find Alice in the list                                                                                    # steps.ListSteps.theTableIsThere(java.lang.String)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

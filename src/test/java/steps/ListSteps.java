@@ -16,15 +16,15 @@ public class ListSteps {
         list.navigateToList();
     }
 
-    @When("^I search the list$")
-    public void searchTheList() throws InterruptedException {
-        list.enterSearchCriteria();
+    @When("^I search (.+) in the list$")
+    public void searchTheList(String state) throws InterruptedException {
+        list.enterSearchCriteria(state);
     }
 
-    @Then("^I can find the text in the list$")
-    public void theTableIsThere() {
+    @Then("^I can find (.+) in the list$")
+    public void theTableIsThere(String text) {
         List<String> lista = list.getAllSearchResults();
-        boolean textIsThere = lista.contains("Christina");
+        boolean textIsThere = lista.contains(text);
 
         if (textIsThere) {
             System.out.println("The text is in the list: PASSED.");

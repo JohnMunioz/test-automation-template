@@ -21,10 +21,10 @@ public class ListPage extends BasePage {
         navigateTo("https://www.w3schools.com/howto/howto_js_filter_lists.asp");
     }
 
-    public void enterSearchCriteria() throws InterruptedException {
+    public void enterSearchCriteria(String state) throws InterruptedException {
        try {
         Thread.sleep(600);
-        write(searchField, "C");
+        write(searchField, state);
        } catch (NoSuchElementException e) {
             System.out.println("The WebElement search fiel couldn't be found.");
             e.printStackTrace();

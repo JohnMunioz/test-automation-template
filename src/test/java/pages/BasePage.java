@@ -35,11 +35,15 @@ public class BasePage {
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         
     }
-
+    
     public static void navigateTo(String url) {
         driver.get(url);
     }
-
+    
+    public static void closeBrowser() {
+        driver.quit();
+    }
+    
     private WebElement Find(String locator) {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
     }
@@ -48,9 +52,6 @@ public class BasePage {
         Find(locator).click();
     }
 
-    public static void closeBrowser() {
-        driver.quit();
-    }
 
     public void write(String locator, String textToWrite) {
         Find(locator).clear();

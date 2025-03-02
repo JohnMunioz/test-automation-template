@@ -1,0 +1,21 @@
+
+@List
+®Scenario Outline: Scenario Outline name: As a Test Enginner, I want to validate that a text is present inside the list # src/test/resources/features/ListPageTest.feature:11
+Ÿ  Given I navigate to the list page                                                                                    # steps.ListSteps.navigateToListPage()
+ª  When I search C in the list                                                                                          # steps.ListSteps.searchTheList(java.lang.String)
+"The text is in the list: PASSED.
+¬  Then I can find Cindy in the list                                                                                    # steps.ListSteps.theTableIsThere(java.lang.String)
+
+@List
+®Scenario Outline: Scenario Outline name: As a Test Enginner, I want to validate that a text is present inside the list # src/test/resources/features/ListPageTest.feature:12
+Ÿ  Given I navigate to the list page                                                                                    # steps.ListSteps.navigateToListPage()
+ª  When I search B in the list                                                                                          # steps.ListSteps.searchTheList(java.lang.String)
+"The text is in the list: PASSED.
+¬  Then I can find Bob in the list                                                                                      # steps.ListSteps.theTableIsThere(java.lang.String)
+
+@List
+®Scenario Outline: Scenario Outline name: As a Test Enginner, I want to validate that a text is present inside the list # src/test/resources/features/ListPageTest.feature:13
+Ÿ  Given I navigate to the list page                                                                                    # steps.ListSteps.navigateToListPage()
+ª  When I search A in the list                                                                                          # steps.ListSteps.searchTheList(java.lang.String)
+&The text is not in the list: FAILED.
+¬  Then I can find Alice in the list                                                                                    # steps.ListSteps.theTableIsThere(java.lang.String)
