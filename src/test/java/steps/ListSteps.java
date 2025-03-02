@@ -2,7 +2,9 @@ package steps;
 
 import java.util.List;
 
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import pages.ListPage;
 
 public class ListSteps {

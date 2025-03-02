@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
-
+import org.openqa.selenium.NoAlertPresentException;
 
 
 public class BasePage {
@@ -113,7 +113,11 @@ public class BasePage {
     }
 
     public void dismissAlert() {
-        driver.switchTo().alert().dismiss();
+        try {
+            driver.switchTo().alert().dismiss();
+        } catch (NoAlertPresentException e) {
+            e.printStackTrace();
+        }
     }
 
     public void acceptAlert() {
